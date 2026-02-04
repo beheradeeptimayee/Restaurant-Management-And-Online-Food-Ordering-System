@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register | eDineIn</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body class="auth-page">
+<div class="auth-box">
+  <h2 class="brand">🍽 eDineIn</h2>
+  <p class="tagline">Create your account</p>
+
+  <form method="POST">
+    {% csrf_token %}
+    <input name="username" placeholder="Username" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <input type="password" name="confirm" placeholder="Confirm Password" required>
+    <button>Create Account</button>
+  </form>
+
+  <p class="auth-link">
+    Already have an account?
+    <a href="{% url 'login' %}">Login</a>
+  </p>
+</div>
+</body>
+</html>

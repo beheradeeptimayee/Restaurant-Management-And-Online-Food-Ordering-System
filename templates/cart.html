@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2 class="title">My Cart</h2>
+
+{% if cart and cart.items.all %}
+{% for item in cart.items.all %}
+<div class="cart-item">
+    <b>{{ item.food.name }}</b>
+
+    <div class="qty-box">
+        <a href="{% url 'decrease_quantity' item.id %}">➖</a>
+        <span>{{ item.quantity }}</span>
+        <a href="{% url 'add_to_cart' item.food.id %}">➕</a>
+    </div>
+
+    <span>₹{{ item.subtotal }}</span>
+    <a href="{% url 'remove_item' item.id %}">❌</a>
+</div>
+{% endfor %}
+
+<div class="cart-summary">
+   <h3>Grand Total: ₹{{ total }}</h3><br>
+   <a class="btn" href="{% url 'checkout' %}">Proceed to Checkout</a>
+   <a class="btn-outline" href="{% url 'home' %}">Add more items</a>
+</div>
+
+{% else %}
+<p>Your cart is empty.</p>
+{% endif %}
+
+<style>
+.cart-item {
+  background:white;
+  padding:15px 20px;
+  border-radius:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.qty-box a { margin:0 10px; text-decoration:none; }
+
+.cart-summary {
+  margin-top:30px;
+  padding:25px;
+  background:white;
+  border-radius:14px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+</style>
+
+{% endblock %}

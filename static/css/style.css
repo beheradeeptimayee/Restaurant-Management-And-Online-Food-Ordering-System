@@ -1,0 +1,219 @@
+/* =====================
+   RESET + BASE
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f6f8fc;
+  color: #222;
+}
+
+/* =====================
+   COLORS
+===================== */
+:root {
+  --primary: #ff5722;
+  --primary-dark: #e64a19;
+  --bg-light: #f6f8fc;
+  --text-light: #666;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+  background: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar h2 {
+  color: var(--primary);
+}
+
+.nav-links a {
+  margin-left: 18px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.user-badge {
+  background: #fff3e0;
+  color: var(--primary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-left: 12px;
+}
+
+.logout {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+.btn {
+  background: var(--primary);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+}
+
+.btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 9px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* =====================
+   CONTAINER
+===================== */
+.container {
+  padding: 40px;
+  min-height: 85vh;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+/* =====================
+   CARDS
+===================== */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* =====================
+   AUTH PAGES
+===================== */
+.auth-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff5722, #ff8a50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-box {
+  background: white;
+  width: 380px;
+  padding: 36px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+}
+
+.brand {
+  color: var(--primary);
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 14px;
+  color: var(--text-light);
+  margin: 10px 0 20px;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 13px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.auth-box input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 13px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #ff5722, #ff8a50);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.auth-link {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.auth-link a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* =====================
+   DASHBOARD
+===================== */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.stat-card h2 {
+  color: var(--primary);
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  background: #111827;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}

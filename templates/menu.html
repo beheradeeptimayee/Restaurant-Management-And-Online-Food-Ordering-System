@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="menu-hero">
+    <div class="menu-hero-overlay">
+        <div class="menu-hero-text">
+            <h1>Explore Our Menu</h1>
+            <p>Hand-crafted dishes, premium ingredients, unforgettable taste.</p>
+        </div>
+    </div>
+</section>
+
+<!-- MENU CONTENT -->
+<div class="menu-container">
+
+{% for category in categories %}
+    <div class="category-section">
+        <h2 class="category-title">🍴 {{ category.name }}</h2>
+
+        <div class="food-grid">
+        {% for food in category.foods.all %}
+            <div class="food-card">
+
+                {% if food.image %}
+                <div class="food-img-box">
+                    <img src="{{ food.image.url }}" alt="{{ food.name }}">
+                </div>
+                {% endif %}
+
+                <div class="food-info">
+                    <h4>{{ food.name }}</h4>
+                    <p class="desc">{{ food.description }}</p>
+
+                    <div class="food-bottom">
+                        <span class="price">₹{{ food.price }}</span>
+                        <a href="{% url 'add_to_cart' food.id %}" class="btn add-btn">
+                            Add
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+{% endfor %}
+
+</div>
+
+{% endblock %}

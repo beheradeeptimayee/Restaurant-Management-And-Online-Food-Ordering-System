@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login | eDineIn</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body class="auth-page">
+<div class="auth-box">
+  <h2 class="brand">🍽 eDineIn</h2>
+  <p class="tagline">Sign in to enjoy premium dining</p>
+
+  <form method="POST">
+    {% csrf_token %}
+    <input name="username" placeholder="Username" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button>Login</button>
+  </form>
+
+  <p class="auth-link">
+    Don’t have an account?
+    <a href="{% url 'register' %}">Create one</a>
+  </p>
+</div>
+</body>
+</html>
