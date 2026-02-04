@@ -56,3 +56,4 @@ This ensures data integrity, scalability, and efficient querying.
 - Python 3.x
 - Django
 - Virtual Environment (recommended)
+- pillow(images)
