@@ -1,4 +1,4 @@
-# 🍽️ Restaurant Management & Food Ordering System
+# 🍽️ Restaurant Management & Food Ordering System(eDine-In)
 
 A backend-driven web application built using **Python and Django (MVT architecture)** that automates restaurant operations and provides a seamless online food ordering experience. The system enables customers to browse menus, place orders, and track order status, while allowing administrators to efficiently manage menus and orders.
 
