@@ -1,59 +1,130 @@
-# 🍽️ Restaurant Management & Food Ordering System(eDine-In)
+ 🍽️ Restaurant Management & Food Ordering System (eDine-In)
 
 A backend-driven web application built using **Python and Django (MVT architecture)** that automates restaurant operations and provides a seamless online food ordering experience. The system enables customers to browse menus, place orders, and track order status, while allowing administrators to efficiently manage menus and orders.
 
----
+-----------------------------------------------------------------------------------------------------------
 
-## 🚀 Features
+# 🚀 Features
+-----------------------------------------------------------------------------
+* User registration and authentication
+* **Email OTP verification for secure account activation**
+* Secure **login and logout system**
+* **Forgot Password with OTP verification**
+* **Reset Password functionality**
+* **Change Password option for logged-in users**
+* Dynamic menu browsing with categorized food items
+* Cart management (add, update, remove items)
+* Checkout and order placement
+* Real-time order tracking with status updates
+* Admin dashboard for menu and order management
+* Normalized database design for data consistency
 
-- User authentication with **email OTP verification**
-- Secure session-based login and logout
-- Dynamic menu browsing with categorized food items
-- Cart management (add, update, remove items)
-- Checkout and order placement
-- Real-time order tracking with status updates
-- Admin dashboard for menu and order management
-- Normalized database design for data consistency
+----------------------------------------------------
 
----
+# 🛠️ Tech Stack
 
-## 🛠️ Tech Stack
-
-- **Backend:** Python, Django  
-- **Frontend:** HTML, CSS, JavaScript(Basic Implementation)
-- **Database:** SQLite 
-- **Architecture:** Django MVT (Model–View–Template)
-
----
-
-## 🧠 System Workflow
-
-1. User Registration & Login (Email OTP verification)
-2. Menu Browsing
-3. Cart Operations
-4. Checkout & Order Placement
-5. Order Status Tracking
-6. Admin Order & Menu Management
+* **Backend:** Python, Django
+* **Frontend:** HTML, CSS, JavaScript (Basic Implementation)
+* **Database:** SQLite
+* **Architecture:** Django MVT (Model–View–Template)
 
 ---
 
-## 🗄️ Database Design
+# 🧠 System Workflow
+
+1️⃣ User Registration & Login (Email OTP verification)
+2️⃣ Menu Browsing
+3️⃣ Cart Operations
+4️⃣ Checkout & Order Placement
+5️⃣ Order Status Tracking
+6️⃣ Password Management (Forgot / Reset / Change Password)
+7️⃣ Admin Order & Menu Management
+
+---
+
+# 🗄️ Database Design
 
 The application uses **Django ORM** with normalized relational models:
-- Users
-- Food Items
-- Categories
-- Cart & Cart Items
-- Orders & Order Status
 
-This ensures data integrity, scalability, and efficient querying.
+* Users
+* Food Items
+* Categories
+* Cart & Cart Items
+* Orders
+* Order Status
+
+This ensures **data integrity, scalability, and efficient querying**.
 
 ---
 
-## ⚙️ Installation & Setup
+# ⚙️ Installation & Setup
 
 ### Prerequisites
-- Python 3.x
-- Django
-- Virtual Environment (recommended)
-- pillow(images)
+
+* Python 3.x
+* Django
+* Virtual Environment (recommended)
+* Pillow (for image handling)
+
+### Installation Steps
+
+1️⃣ Clone the repository
+----
+git clone https://github.com/beheradeeptimayee/Restaurant-Management-And-Online-Food-Ordering-System.git
+-----
+
+2️⃣ Navigate to the project directory
+
+------
+cd Restaurant
+----
+
+3️⃣ Create a virtual environment
+
+----
+python -m venv venv
+----
+
+4️⃣ Activate the virtual environment
+
+Windows
+
+----
+venv\Scripts\activate
+----
+
+Mac/Linux
+--------
+source venv/bin/activate
+-------
+
+5️⃣ Install dependencies
+
+------
+pip install -r requirements.txt
+-----
+
+6️⃣ Run migrations
+
+----
+python manage.py migrate
+----
+
+7️⃣ Start the server
+python manage.py runserver
+Open in browser:
+
+```
+http://127.0.0.1:8000
+```
+
+
+
+# 📌 Future Enhancements
+
+* Online payment gateway integration
+* Order notification system
+* Restaurant analytics dashboard
+* Mobile responsive UI improvements
+
+
