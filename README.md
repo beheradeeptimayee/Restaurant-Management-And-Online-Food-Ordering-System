@@ -66,60 +66,6 @@ This ensures **data integrity, scalability, and efficient querying**.
 * Virtual Environment (recommended)
 * Pillow (for image handling)
 
-### Installation Steps
-
-1️⃣ Clone the repository
-----
-git clone https://github.com/beheradeeptimayee/Restaurant-Management-And-Online-Food-Ordering-System.git
------
-
-2️⃣ Navigate to the project directory
-
-------
-cd Restaurant
-----
-
-3️⃣ Create a virtual environment
-
-----
-python -m venv venv
-----
-
-4️⃣ Activate the virtual environment
-
-Windows
-
-----
-venv\Scripts\activate
-----
-
-Mac/Linux
---------
-source venv/bin/activate
--------
-
-5️⃣ Install dependencies
-
-------
-pip install -r requirements.txt
------
-
-6️⃣ Run migrations
-
-----
-python manage.py migrate
-----
-
-7️⃣ Start the server
-python manage.py runserver
-Open in browser:
-
-```
-http://127.0.0.1:8000
-```
-
-
-
 # 📌 Future Enhancements
 
 * Online payment gateway integration
