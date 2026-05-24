@@ -48,13 +48,20 @@ def remove_item(request, item_id):
 
     return redirect("view_cart")
 
-
 @login_required
 def view_cart(request):
+
     cart = Cart.objects.filter(user=request.user).first()
-    total = sum(item.subtotal() for item in cart.items.all()) if cart else 0
+
+    subtotal = sum(item.subtotal() for item in cart.items.all()) if cart else 0
+
+    delivery_fee = 40 if subtotal < 150 else 0
+
+    grand_total = subtotal + delivery_fee
 
     return render(request, "cart.html", {
         "cart": cart,
-        "total": total
+        "subtotal": subtotal,
+        "delivery_fee": delivery_fee,
+        "grand_total": grand_total
     })
