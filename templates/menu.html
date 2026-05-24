@@ -38,7 +38,7 @@
 <h4>{{ food.name }}</h4>
 
 <p class="desc">
-{{ food.description|truncatechars:60 }}
+{{ food.description|truncatechars:400 }}
 </p>
 
 <div class="food-bottom">
@@ -56,8 +56,4 @@
 </div>
 <a href="{% url 'view_cart' %}" class="floating-cart">🛒</a>
 
-<<<<<<< HEAD
 {% endblock %}
-=======
-{% endblock %}
->>>>>>> 658752f (Added new files and updates)
