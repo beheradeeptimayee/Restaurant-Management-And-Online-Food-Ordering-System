@@ -141,7 +141,7 @@ EMAIL_HOST='smtp.gmail.com'
 
 EMAIL_HOST_USER='beheragoodly1127@gmail.com'
 
-EMAIL_HOST_PASSWORD='fylr jpyx geed jthp'
+EMAIL_HOST_PASSWORD='XXXXX XXXX XXXX XXXX'
 
 EMAIL_USE_TLS=True
 
